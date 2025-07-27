@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from 'react'
-import { createInViewObserver } from '@viewport-utils/core'
+import { useEffect, useRef, useState } from "react";
+import { createInViewObserver } from "@intersection-observer/core";
 
 export function useInView(options?: IntersectionObserverInit) {
   const ref = useRef<HTMLElement | null>(null)
@@ -7,7 +7,7 @@ export function useInView(options?: IntersectionObserverInit) {
 
   useEffect(() => {
     if (!ref.current) return
-    const observer = createInViewObserver((entry) => {
+    const observer = createInViewObserver((entry: IntersectionObserverEntry) => {
       setInView(entry.isIntersecting)
       if (entry.isIntersecting) observer.unobserve(entry.target)
     }, options)

@@ -20,13 +20,14 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var index_exports = {};
 __export(index_exports, {
-  LazyRender: () => LazyRender
+  LazyRender: () => LazyRender,
+  useInView: () => useInView
 });
 module.exports = __toCommonJS(index_exports);
 
 // src/useInView.tsx
 var import_react = require("react");
-var import_core = require("@viewport-utils/core");
+var import_core = require("@intersection-observer/core");
 function useInView(options) {
   const ref = (0, import_react.useRef)(null);
   const [inView, setInView] = (0, import_react.useState)(false);
@@ -60,5 +61,6 @@ var LazyRender = ({
 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  LazyRender
+  LazyRender,
+  useInView
 });

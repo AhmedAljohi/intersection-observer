@@ -1,6 +1,6 @@
 // src/useInView.tsx
 import { useEffect, useRef, useState } from "react";
-import { createInViewObserver } from "@viewport-utils/core";
+import { createInViewObserver } from "@intersection-observer/core";
 function useInView(options) {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
@@ -33,5 +33,6 @@ var LazyRender = ({
   );
 };
 export {
-  LazyRender
+  LazyRender,
+  useInView
 };

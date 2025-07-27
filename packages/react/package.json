@@ -1,5 +1,5 @@
 {
-  "name": "@viewport-utils/react",
+  "name": "@intersection-observer/react",
   "version": "0.0.1",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -13,10 +13,13 @@
     "react-dom": ">=17"
   },
   "dependencies": {
-    "@viewport-utils/core": "workspace:*"
+    "@intersection-observer/core": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

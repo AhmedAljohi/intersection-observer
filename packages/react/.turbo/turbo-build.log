@@ -1,8 +1,37 @@
 
 
-> @viewport-utils/react@0.0.1 build /Users/ahmedaljohi/Desktop/viewport-utils/packages/react
+> @intersection-observer/react@0.0.1 build /Users/ahmedaljohi/Desktop/viewport-utils/packages/react
 > tsup src/index.ts --format cjs,esm --dts --tsconfig tsconfig.json
 
 [34mCLI[39m Building entry: src/index.ts
-[31mCannot find tsconfig: tsconfig.json[39m
-[41m[30m ELIFECYCLE [39m[49m [31mCommand failed with exit code 1.[39m
+[34mCLI[39m Using tsconfig: tsconfig.json
+[34mCLI[39m tsup v8.5.0
+[34mCLI[39m Target: es2017
+[34mCJS[39m Build start
+[34mESM[39m Build start
+
+[43m[30m WARN [39m[49m [33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mExpected the "paths" option to be nested inside a "compilerOptions" object[0m [tsconfig.json]                    [90m2:49:38 PM[39m
+
+    ../../tsconfig.base.json:18:2:
+[37m      18 │   [32m"paths"[37m: {
+         ╵   [32m~~~~~~~[0m
+
+
+
+
+[43m[30m WARN [39m[49m [33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mExpected the "paths" option to be nested inside a "compilerOptions" object[0m [tsconfig.json]                    [90m2:49:38 PM[39m
+
+    ../../tsconfig.base.json:18:2:
+[37m      18 │   [32m"paths"[37m: {
+         ╵   [32m~~~~~~~[0m
+
+
+
+[32mCJS[39m [1mdist/index.js [22m[32m2.06 KB[39m
+[32mCJS[39m ⚡️ Build success in 94ms
+[32mESM[39m [1mdist/index.mjs [22m[32m966.00 B[39m
+[32mESM[39m ⚡️ Build success in 94ms
+DTS Build start
+DTS ⚡️ Build success in 648ms
+DTS dist/index.d.ts  397.00 B
+DTS dist/index.d.mts 397.00 B
