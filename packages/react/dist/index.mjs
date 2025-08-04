@@ -1,3 +1,6 @@
+// src/LazyRender.tsx
+import React from "react";
+
 // src/useInView.tsx
 import { useEffect, useRef, useState } from "react";
 import { createInViewObserver } from "@intersection-observer/core";
@@ -17,21 +20,35 @@ function useInView(options) {
 }
 
 // src/LazyRender.tsx
-import { jsx } from "react/jsx-runtime";
-var LazyRender = ({
+function LazyRender({
   children,
-  className
-}) => {
-  const { ref, inView } = useInView();
-  return /* @__PURE__ */ jsx(
-    "div",
-    {
-      ref,
-      className: `${className || ""} ${inView ? "in-view" : ""}`,
-      children: inView ? children : null
-    }
-  );
-};
+  as = "div",
+  onChange,
+  threshold = 0,
+  className,
+  style
+}) {
+  const { ref, inView } = useInView({ threshold });
+  React.useEffect(() => {
+    if (onChange) onChange(inView);
+  }, [inView]);
+  const props = {
+    ref,
+    className,
+    style
+  };
+  if (typeof children === "function") {
+    return children({
+      inView,
+      ref: (node) => {
+        if (ref && typeof ref === "object" && "current" in ref) {
+          ref.current = node;
+        }
+      }
+    });
+  }
+  return React.createElement(as, props, children);
+}
 export {
   LazyRender,
   useInView

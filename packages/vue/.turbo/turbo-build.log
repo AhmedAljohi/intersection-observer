@@ -1,0 +1,10 @@
+
+
+> @intersection-observer/vue@0.0.1 build /Users/ahmedaljohi/Desktop/viewport-utils/packages/vue
+> vite build
+
+[36mvite v4.5.14 [32mbuilding for production...[36m[39m
+[2K[1Gtransforming (1) [2msrc/index.ts[22m[2K[1G[32m✓[39m 6 modules transformed.
+[2K[1Grendering chunks (1)...[2K[1G[2K[1Gcomputing gzip size (0)...[2K[1Gcomputing gzip size (1)...[2K[1G[2mdist/[22m[36mintersection-observer-vue.es.js  [39m[1m[2m2.01 kB[22m[1m[22m[2m │ gzip: 0.97 kB[22m
+[2K[1Grendering chunks (1)...[2K[1G[2K[1Gcomputing gzip size (1)...[2K[1G[2mdist/[22m[36mintersection-observer-vue.umd.js  [39m[1m[2m1.72 kB[22m[1m[22m[2m │ gzip: 0.92 kB[22m
+[32m✓ built in 130ms[39m

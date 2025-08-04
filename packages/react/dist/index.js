@@ -1,7 +1,9 @@
 "use strict";
+var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __export = (target, all) => {
   for (var name in all)
@@ -15,6 +17,14 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  // If the importer is in node compatibility mode or this is not an ESM
+  // file that has been converted to a CommonJS file using a Babel-
+  // compatible transform (i.e. "__esModule" has not been set), then set
+  // "default" to the CommonJS "module.exports" for node compatibility.
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // src/index.ts
@@ -24,6 +34,9 @@ __export(index_exports, {
   useInView: () => useInView
 });
 module.exports = __toCommonJS(index_exports);
+
+// src/LazyRender.tsx
+var import_react2 = __toESM(require("react"));
 
 // src/useInView.tsx
 var import_react = require("react");
@@ -44,21 +57,35 @@ function useInView(options) {
 }
 
 // src/LazyRender.tsx
-var import_jsx_runtime = require("react/jsx-runtime");
-var LazyRender = ({
+function LazyRender({
   children,
-  className
-}) => {
-  const { ref, inView } = useInView();
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-    "div",
-    {
-      ref,
-      className: `${className || ""} ${inView ? "in-view" : ""}`,
-      children: inView ? children : null
-    }
-  );
-};
+  as = "div",
+  onChange,
+  threshold = 0,
+  className,
+  style
+}) {
+  const { ref, inView } = useInView({ threshold });
+  import_react2.default.useEffect(() => {
+    if (onChange) onChange(inView);
+  }, [inView]);
+  const props = {
+    ref,
+    className,
+    style
+  };
+  if (typeof children === "function") {
+    return children({
+      inView,
+      ref: (node) => {
+        if (ref && typeof ref === "object" && "current" in ref) {
+          ref.current = node;
+        }
+      }
+    });
+  }
+  return import_react2.default.createElement(as, props, children);
+}
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   LazyRender,

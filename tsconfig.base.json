@@ -12,11 +12,13 @@
     "declarationMap": true,
     "sourceMap": true,
     "outDir": "dist",
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@intersection-observer/core": ["packages/core/src"],
+      "@intersection-observer/react": ["packages/react/src"],
+      "@intersection-observer/vue": ["packages/vue/src"]
+    }
   },
   "include": ["src"],
-  "paths": {
-    "@intersection-observer/core": ["packages/core/src"],
-    "@intersection-observer/react": ["packages/react/src"]
-  }
 }

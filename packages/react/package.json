@@ -1,6 +1,7 @@
 {
   "name": "@intersection-observer/react",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "description": "React utilities for observing when elements enter or leave the viewport using Intersection Observer API.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -13,12 +14,27 @@
     "react-dom": ">=17"
   },
   "dependencies": {
-    "@intersection-observer/core": "workspace:*"
+    "@intersection-observer/core": "^0.0.2"
   },
   "devDependencies": {
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmedaljohi/intersection-observer"
+  },
+  "author": "Ahmed Aljohi",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "intersection-observer",
+    "viewport",
+    "hooks",
+    "lazy-loading",
+    "render-props",
+    "react-component"
+  ],
   "publishConfig": {
     "access": "public"
   }
