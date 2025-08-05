@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "preserve", // or "react-jsx" or "preserve" if you're using Vue + TSX
+    "jsxImportSource": "vue", // required for Vue 3 + TSX support
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "lib": ["ESNext", "DOM"],
+    "baseUrl": ".",
+  },
+  "include": ["src"],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --tsconfig tsconfig.json",
+    "dev": "tsup src/index.ts --watch --tsconfig tsconfig.json"
+  }
+}
