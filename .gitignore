@@ -1,0 +1,21 @@
+# Ignore IDE & system files
+.DS_Store
+node_modules/
+dist/
+coverage/
+.vscode/
+
+# pnpm-specific
+pnpm-lock.yaml
+
+# Log files
+*.log
+
+# Example build outputs
+examples/*/dist/
+examples/*/.vite/
+
+# Build output
+dist/
+.vite/
+*.log
