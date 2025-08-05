@@ -1,7 +1,23 @@
 {
   "name": "@intersection-observer/core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmedaljohi/intersection-observer"
+  },
+  "author": "Ahmed Aljohi",
+  "license": "MIT",
+  "keywords": [
+    "intersection-observer",
+    "visibility",
+    "viewport",
+    "observer",
+    "hooks"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
