@@ -1,6 +1,6 @@
 {
   "name": "@intersection-observer/react",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React utilities for observing when elements enter or leave the viewport using Intersection Observer API.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -14,7 +14,7 @@
     "react-dom": ">=17"
   },
   "dependencies": {
-    "@intersection-observer/core": "^0.0.2"
+    "@intersection-observer/core": "^0.0.3"
   },
   "devDependencies": {
     "@types/react": "^19.1.9",
