@@ -1,4 +1,7 @@
 # @intersection-observer/vue
+![Version](https://img.shields.io/npm/v/@intersection-observer/vue.svg)
+![License](https://img.shields.io/npm/l/@intersection-observer/vue.svg)
+![Downloads](https://img.shields.io/npm/dm/@intersection-observer/vue.svg)
 
 Vue utilities for observing DOM elements using Intersection Observer API. This package provides composables and components to easily detect when elements enter or leave the viewport.
 
