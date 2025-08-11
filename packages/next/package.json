@@ -1,6 +1,6 @@
 {
   "name": "@intersection-observer/next",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Next.js utilities for observing when elements enter or leave the viewport using Intersection Observer API.",
   "main": "dist/index.js",
   "module": "dist/index.js",
