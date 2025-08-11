@@ -1,0 +1,64 @@
+{
+  "name": "@intersection-observer/next",
+  "version": "0.0.1",
+  "description": "Next.js utilities for observing when elements enter or leave the viewport using Intersection Observer API.",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "vitest run",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "prepare": "pnpm build"
+  },
+  "peerDependencies": {
+    "next": ">=13",
+    "react": ">=18"
+  },
+  "dependencies": {
+    "@intersection-observer/core": "^0.0.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "tsup": "^6.7.0",
+    "typescript": "^5.1.6",
+    "vitest": "^0.30.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmedaljohi/intersection-observer"
+  },
+  "author": "Ahmed Aljohi",
+  "license": "MIT",
+  "keywords": [
+    "nextjs",
+    "next",
+    "react",
+    "intersection-observer",
+    "viewport",
+    "hooks",
+    "lazy-loading",
+    "ssr",
+    "react-component",
+    "nextjs-plugin"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

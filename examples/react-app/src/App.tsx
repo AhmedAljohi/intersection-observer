@@ -49,7 +49,6 @@ function App() {
               <div ref={ref}>
                 {inView && (
                   <ProductCard
-                    ref={ref}
                     title={product.title}
                     price={product.price}
                     description={product.description}
