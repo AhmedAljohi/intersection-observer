@@ -17,6 +17,7 @@
     "paths": {
       "@intersection-observer/core": ["packages/core/src"],
       "@intersection-observer/react": ["packages/react/src"],
+      "@intersection-observer/next": ["packages/next/src"],
       "@intersection-observer/vue": ["packages/vue/src"]
     }
   },

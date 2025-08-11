@@ -4,6 +4,7 @@ node_modules/
 dist/
 coverage/
 .vscode/
+.turbo/
 
 # pnpm-specific
 pnpm-lock.yaml
